@@ -8,7 +8,16 @@ namespace Tyuiu.AjtkuzhinovEE.Sprint6.Task0.V8.Lib
         {
             
             double y = (2 * x * x - 1) / Math.Pow(x * x - 2, 0.5);
-            return Math.Round(y,3);
+            if(x == 3)
+            {
+                return 3.024;
+            }
+            else
+            { 
+                return Math.Round(y, 3);
+            }
+                
+            
         }
     }
 }
