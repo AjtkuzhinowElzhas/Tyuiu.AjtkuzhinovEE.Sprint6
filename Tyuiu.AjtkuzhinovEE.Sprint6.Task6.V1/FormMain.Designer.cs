@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.AjtkuzhinovEE.Sprint6.Task5.V4
+﻿namespace Tyuiu.AjtkuzhinovEE.Sprint6.Task6.V1
 {
     partial class FormMain
     {
@@ -28,19 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(128, 255, 255);
+            panel1.Location = new Point(2, 107);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1093, 131);
+            panel1.TabIndex = 0;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1096, 696);
+            Controls.Add(panel1);
             Name = "FormMain";
-            Text = "Form1";
-            Load += this.FormMain_Load;
+            Text = "Спринт 6 | Таск 6 | Вариант 1 | Айткужинов.Е.Е";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
     }
 }
