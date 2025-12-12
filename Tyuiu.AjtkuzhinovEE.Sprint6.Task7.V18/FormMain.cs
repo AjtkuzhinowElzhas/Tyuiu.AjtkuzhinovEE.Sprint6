@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using Tyuiu.AjtkuzhinovEE.Sprint6.Task7.V18.Lib;
 
 namespace Tyuiu.AjtkuzhinovEE.Sprint6.Task7.V18
@@ -85,9 +86,51 @@ namespace Tyuiu.AjtkuzhinovEE.Sprint6.Task7.V18
                     dataGridViewIn.Rows[r].Cells[c].Value = arrayValues[r, c];
                 }
             }
+            buttonOpenFile_AEE.Enabled = true;
 
         }
-        
+        private void buttonOpenFile_AEE_Click(Object sender, EventArgs e)
+        {
+            saveFileDialogMatrix.FileName = "OutPutFileTask7.csv";
+            saveFileDialogMatrix.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialogMatrix.ShowDialog();
 
+            string path = saveFileDialogMatrix.FileName;
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+
+            if (fileExists)
+            {
+                File.Delete(path);
+            }
+
+            int rows = dataGridViewOut.Rows.Count;
+            int columns = dataGridViewIn.Columns.Count;
+
+            string str = "";
+
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < columns; c++)
+                {
+                    if (c != columns - 1)
+                    {
+                        str += dataGridViewOut.Rows[r].Cells[c].Value + ";";
+                    }
+                    else
+                    {
+                        str += dataGridViewOut.Rows[r].Cells[c].Value;
+                    }
+                }
+                File.AppendAllText(path, str + Environment.NewLine);
+                str = "";
+            }
+        }
+
+        private void buttonOpenFile_MouseEnter(object sender, EventArgs e)
+        {
+             
+        }
     }
 }

@@ -97,6 +97,7 @@
             buttonOpen_AEE.TabIndex = 1;
             buttonOpen_AEE.UseVisualStyleBackColor = true;
             buttonOpen_AEE.Click += buttonOpen_AEE_Click;
+            buttonOpen_AEE.MouseEnter += buttonOpenFile_MouseEnter;
             // 
             // buttonHelp_AEE
             // 
@@ -163,7 +164,7 @@
             groupBox2.Size = new Size(615, 416);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Ввод:";
+            groupBox2.Text = "Вывод:";
             // 
             // panel4
             // 
@@ -183,12 +184,12 @@
             groupBox3.Size = new Size(406, 416);
             groupBox3.TabIndex = 0;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Вывод:";
+            groupBox3.Text = "Ввод:";
             // 
             // dataGridViewOut
             // 
             dataGridViewOut.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOut.Location = new Point(6, 26);
+            dataGridViewOut.Location = new Point(6, 23);
             dataGridViewOut.Name = "dataGridViewOut";
             dataGridViewOut.RowHeadersWidth = 51;
             dataGridViewOut.Size = new Size(377, 379);
