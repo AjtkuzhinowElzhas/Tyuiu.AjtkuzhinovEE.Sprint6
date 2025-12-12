@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panel1 = new Panel();
             buttonOpenFile_AEE = new Button();
@@ -46,6 +47,7 @@
             splitter1 = new Splitter();
             openFileDialogTask_AEE = new OpenFileDialog();
             saveFileDialogMatrix = new SaveFileDialog();
+            toolTipButton = new ToolTip(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -77,6 +79,7 @@
             buttonOpenFile_AEE.TabIndex = 3;
             buttonOpenFile_AEE.UseVisualStyleBackColor = true;
             buttonOpenFile_AEE.Click += buttonOpen_AEE_Click;
+            buttonOpenFile_AEE.MouseEnter += buttonSave_MouseEnter;
             // 
             // buttonExecute_AEE
             // 
@@ -87,6 +90,7 @@
             buttonExecute_AEE.TabIndex = 2;
             buttonExecute_AEE.UseVisualStyleBackColor = true;
             buttonExecute_AEE.Click += buttonExecute_AEE_Click;
+            buttonExecute_AEE.MouseEnter += buttonDone_MouseEnter;
             // 
             // buttonOpen_AEE
             // 
@@ -108,6 +112,7 @@
             buttonHelp_AEE.TabIndex = 0;
             buttonHelp_AEE.UseVisualStyleBackColor = true;
             buttonHelp_AEE.Click += buttonHelp_AEE_Click;
+            buttonHelp_AEE.MouseEnter += buttonHelp_MouseEnter;
             // 
             // panel2
             // 
@@ -207,6 +212,12 @@
             // openFileDialogTask_AEE
             // 
             openFileDialogTask_AEE.FileName = "openFileDialog1";
+            openFileDialogTask_AEE.FileOk += openFileDialogTask_AEE_FileOk;
+            // 
+            // toolTipButton
+            // 
+            toolTipButton.IsBalloon = true;
+            toolTipButton.ToolTipTitle = "Подсказка";
             // 
             // FormMain
             // 
@@ -252,5 +263,6 @@
         private SaveFileDialog saveFileDialogMatrix;
         private Button buttonExecute_AEE;
         private Button buttonOpenFile_AEE;
+        private ToolTip toolTipButton;
     }
 }

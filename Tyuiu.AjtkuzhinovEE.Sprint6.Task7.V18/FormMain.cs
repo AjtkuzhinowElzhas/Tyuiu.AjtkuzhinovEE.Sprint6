@@ -130,7 +130,27 @@ namespace Tyuiu.AjtkuzhinovEE.Sprint6.Task7.V18
 
         private void buttonOpenFile_MouseEnter(object sender, EventArgs e)
         {
-             
+            toolTipButton.ToolTipTitle = "Открыть файл";
+        }
+
+        private void buttonDone_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipButton.ToolTipTitle = "Выполнить";
+        }
+
+        private void buttonSave_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipButton.ToolTipTitle = "Сохранить в файл ";
+        }
+
+        private void buttonHelp_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipButton.ToolTipTitle = "Справка";
+        }
+
+        private void openFileDialogTask_AEE_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }
